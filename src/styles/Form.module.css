@@ -1,0 +1,77 @@
+.form-filter{
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--Blue);
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    border-radius:5px;
+}
+
+.input-container{
+    width: 100%;
+    margin-bottom: 3%;
+    border-radius: 2px;
+    display: flex;
+    overflow: hidden;
+}
+
+.input-container input{
+    width: 95%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.button{
+    border: none;
+    background: var(--Orange);
+    transition: background .3s ease;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    font-weight: bold;
+    user-select: none;
+}
+.input-container button{
+    width: 5%;
+    font-size: 19px;
+    padding: 10px;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: var(--OrangeDarker);
+}
+
+.musics-cascade{
+     display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-bottom: 2%;
+}
+.music{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing:border-box;
+    color: white;
+    border-bottom: 1px solid white;
+    transition: background .5s ease;
+}
+
+.music:hover{
+    background: rgb(190,190,190);
+}
+.music button{
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    background: none;
+    color: red;
+    font-weight: bold;
+}
+
+

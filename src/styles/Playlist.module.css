@@ -1,0 +1,36 @@
+.container{
+    margin-top: 5%;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.playlist-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.playlist-card{
+    width: 20%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.playlist-card:last-child{
+    animation: reveal 1s ease ;
+}
+
+
+
+@keyframes reveal {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "gid",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/font": "13.2.4",
+    "@tanstack/react-table": "^8.10.1",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.33",
+    "@types/react-dom": "18.0.11",
+    "cookies-next": "^4.0.0",
+    "next": "13.2.4",
+    "nookies": "^2.5.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-toastify": "^9.1.2",
+    "typescript": "5.0.3",
+    "use-debounce": "^10.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "express": "^4.18.2",
+    "postcss": "^8.4.21"
+  }
+}
