@@ -44,9 +44,7 @@ export default function MusicForm() {
             position: "bottom-left"
         })
 
-        fetch(`${[process.env.API_URL]}/recommendation?tracks=spotify:track:5CG9Ps5ynNjpKJHmwc95pa
-
-`)
+        fetch(`${[process.env.API_URL]}/recommendation?tracks=${musics.join(',')}`)
             .then(resp => resp.json())
             .then(resp => {
                 resp.forEach((pid: string, index: number) => {
@@ -63,7 +61,10 @@ export default function MusicForm() {
         <div className={PlaylistStyle["container"]}>
             <div title="As músicas informadas irão basear as recomendações que serão feitas" className={FormStyle["form-filter"]}>
                 <div className={FormStyle["input-container"]}>
-                    <input type="text" placeholder="Digite o nome da música" ref={ref} onKeyDown={onKeyDown} value={filter} onChange={(e) => setFilter(e.target.value)}></input>
+                    <input type="text" list="musics" placeholder="Digite o nome da música" ref={ref} onKeyDown={onKeyDown} value={filter} onChange={(e) => setFilter(e.target.value)}></input>
+                    <datalist  id="musics">
+                        
+                    </datalist>
                     <button type="button" className={FormStyle["button"]} onClick={addMusic}>+</button>
                 </div>
                 <div className={FormStyle["musics-cascade"]}>
