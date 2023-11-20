@@ -67,6 +67,8 @@ export default function MusicForm() {
                     </datalist>
                     <button type="button" className={FormStyle["button"]} onClick={addMusic}>+</button>
                 </div>
+
+                <div className={FormStyle["music-model"]}>
                 <div className={FormStyle["musics-cascade"]}>
                     {musics.map((music, index) => {
                         return <div key={index} className={FormStyle["music"]}>
@@ -75,13 +77,19 @@ export default function MusicForm() {
                         </div>
                     })}
                 </div>
+        	 <div className={FormStyle["music-container"]}>
+                <textarea  title="Cole aqui o array das musicas" onChange={(e)=> {
+                   setMusics(JSON.parse(e.target.value));
+                   //TODO verifica se é cntrl v
+                }} value={musics.join(",\r\n")}/> 
+            </div>
+            </div>
                 <button onClick={searchPlaylist} className={FormStyle["button"]}>Buscar</button>
             </div>
             <div className={PlaylistStyle["playlist-container"]}>
                 {playlists.map((recommendation => <PlaylistCard recommendation={recommendation} />))}
             </div>
         </div>
-
 
     )
 }
