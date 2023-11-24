@@ -73,7 +73,7 @@ export default function MusicForm() {
         <div className={PlaylistStyle["container"]}>
             <div title="As músicas informadas irão basear as recomendações que serão feitas" className={FormStyle["form-filter"]}>
                 <div className={FormStyle["input-container"]}>
-                    <input type="text" list="musics" placeholder="Digite o nome da música" ref={ref} onKeyDown={onKeyDown} value={filter} onChange={(e) => setFilter(e.target.value)}></input>
+                    <input type="text" name="music" list="musics" placeholder="Digite o nome da música" ref={ref} onKeyDown={onKeyDown} value={filter} onChange={(e) => setFilter(e.target.value)}></input>
                     <datalist  id="musics">
                         
                     </datalist>
