@@ -9,7 +9,9 @@ export default function MusicForm() {
     const [musics, setMusics] = useState<string[]>([]);
     const [playlists, setPlaylists] = useState<string[]>([])
     const [filter, setFilter] = useState("");
+    const textRef = useRef(null);
 
+    const[textArea, setTextArea] = useState("");
 
     useEffect(() => { console.log(musics) }, [musics]);
 
@@ -54,6 +56,16 @@ export default function MusicForm() {
                 showSucessToast("Playlists carregadas");
             })
     }
+    function handleDown(e:any){
+        const entry = e.target.value.split(",");
+        try{
+            setMusics(entry);
+           setTextArea(e.targer.value);
+        }catch{
+            setTextArea(e.target.value)
+            showErrorToast("Formato deve ser um array de musicas separadas por , ");
+        }
+    }
     function deleteMusic(index: number) {
         setMusics(musics.filter((_, i) => index != i));
     }
@@ -78,10 +90,7 @@ export default function MusicForm() {
                     })}
                 </div>
         	 <div className={FormStyle["music-container"]}>
-                <textarea  title="Cole aqui o array das musicas" onChange={(e)=> {
-                   setMusics(JSON.parse(e.target.value));
-                   //TODO verifica se é cntrl v
-                }} value={musics.join(",\r\n")}/> 
+                <textarea  title="Cole aqui o array das musicas" ref={ref}  onChange={handleDown} value={textArea}/> 
             </div>
             </div>
                 <button onClick={searchPlaylist} className={FormStyle["button"]}>Buscar</button>
