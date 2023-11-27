@@ -45,10 +45,9 @@ export default function MusicForm() {
             isLoading: true,
             position: "bottom-left"
         })
-
-        fetch(`/api/recommend`,{
-            method: "POST",
-            headers: {
+            fetch(`/api/recommend`,{
+                method: "POST",
+                headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({songs:musics})
@@ -60,6 +59,10 @@ export default function MusicForm() {
                 })
                 toast.dismiss(toastId);
                 showSucessToast("Playlists carregadas");
+            }).catch((err)=>{
+                toast.dismiss(toastId);
+                showErrorToast("Erro ao carregar playlists, lanca ponto extra pls");
+
             })
     }
     function handleDown(e:any){
