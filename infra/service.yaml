@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: joao-marcos-api-recommendation-service
+  name:joao-marcos-front-recommendation-deployment
 spec:
   type: LoadBalancer
   selector:
-    app: joao-marcos-api-recommendation
+    app: joao-marcos-front-recommendation
   ports:
     - protocol: TCP
-      port: 32188
+      port: 32202
       targetPort: 3000
-      nodePort: 32188
+      nodePort: 32202
