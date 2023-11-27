@@ -1,6 +1,5 @@
-import { NextRequest, NextResponse } from "next/server";
 
-export default async function handler(req: NextRequest, res: NextResponse){
+export default async function handler(req, res){
 
     let resp:any = fetch(`${process.env.API_URL}/api/recommend`,{
         method: 'POST',
@@ -13,5 +12,5 @@ export default async function handler(req: NextRequest, res: NextResponse){
 
     resp = await req.json();
 
-    return Response.json(res);
+    res.status(200).json(resp);
 }
