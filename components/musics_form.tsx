@@ -46,7 +46,13 @@ export default function MusicForm() {
             position: "bottom-left"
         })
 
-        fetch(`${[process.env.API_URL]}/recommendation?tracks=${musics.join(',')}`)
+        fetch(`/api/recommend`,{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({songs:musics})
+        })
             .then(resp => resp.json())
             .then(resp => {
                 resp.forEach((pid: string, index: number) => {
