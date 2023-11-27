@@ -19,4 +19,4 @@ spec:
            - name: API_URL
              value: http://10.10.10.10:32188
           ports:
-          - containerPort: 3000
+           - containerPort: 3000
