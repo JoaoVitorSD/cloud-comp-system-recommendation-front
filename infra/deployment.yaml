@@ -15,7 +15,6 @@ spec:
       containers:
         - name: joao-marcos-front-recommendation
           image:  joaovitorsd/tp-cloud-comp-front:latest
-          imagePullPolicy: Always
           env:
            - name: API_URL
              value: http://10.10.10.10:32188
