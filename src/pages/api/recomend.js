@@ -1,7 +1,7 @@
 
 export default async function handler(req, res){
 
-    let resp:any = fetch(`${process.env.API_URL}/api/recommend`,{
+    let resp = fetch(`${process.env.API_URL}/api/recommend`,{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
