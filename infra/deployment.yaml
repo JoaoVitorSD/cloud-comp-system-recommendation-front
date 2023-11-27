@@ -17,6 +17,6 @@ spec:
           image:  joaovitorsd/tp-cloud-comp-front:latest
           env:
            - name: API_URL
-             value: http://10.10.10.10:32188
+             value: http://joao-marcos-api-recommendation-service:32188
           ports:
            - containerPort: 3000
