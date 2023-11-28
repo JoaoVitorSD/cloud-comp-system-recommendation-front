@@ -17,6 +17,7 @@ export default function Home({ isLoggedIn, roles }: any) {
     <>
       <Head>
         <title>Playlists Recommendation</title>
+        <link rel="icon" href="favicon.png" />
       </Head>
       <main>
         <header>
