@@ -12,7 +12,6 @@ export default function Home({ isLoggedIn, roles }: any) {
   
   }, []);
 
-
   return (
     <>
       <Head>
